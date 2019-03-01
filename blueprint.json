@@ -27,7 +27,7 @@
         "label": "GPL v2"
       }
     },
-    "timestamp": "2019-03-01T17:55:25+11:00"
+    "timestamp": "2019-03-01T18:08:59+11:00"
   },
   "software": {
     "base": {
@@ -103,9 +103,18 @@
         "name": "change_password",
         "label": "Change Password",
         "return_type": "plain_text",
+        "variables": [
+          {
+            "name": "password",
+            "input": {
+              "type": "password_with_confirmation",
+              "label": "Password"
+            }
+          }
+        ],
         "script": {
           "language": "sh",
-          "content": "#!/bin/sh\r\n\r\n\r\ncat /home/app/config.php | sed 's@$passwd = .*@$passwd = SADRWQERTFAGARET@' |sed \"s/SADRWQERTFAGARET/$password/\"  > /tmp/.config.php\r\nmv  /tmp/.config.php  /tmp/.config.php\r\n"
+          "content": "#!/bin/sh\r\n\r\n\r\ncat /home/app/config.php | sed 's@$passwd = .*@$passwd = SADRWQERTFAGARET@' |sed \"s/SADRWQERTFAGARET/$password/\"  > /tmp/.config.php\r\nmv  /tmp/.config.php  /home/app/config.php\r\n"
         }
       }
     ],
