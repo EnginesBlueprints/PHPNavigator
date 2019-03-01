@@ -27,7 +27,7 @@
         "label": "GPL v2"
       }
     },
-    "timestamp": "2019-03-01T18:08:59+11:00"
+    "timestamp": "2019-03-01T18:36:03+11:00"
   },
   "software": {
     "base": {
@@ -114,7 +114,7 @@
         ],
         "script": {
           "language": "sh",
-          "content": "#!/bin/sh\r\n\r\n\r\ncat /home/app/config.php | sed 's@$passwd = .*@$passwd = SADRWQERTFAGARET@' |sed \"s/SADRWQERTFAGARET/$password/\"  > /tmp/.config.php\r\nmv  /tmp/.config.php  /home/app/config.php\r\n"
+          "content": "#!/bin/sh\r\n\r\n\r\ncat /home/app/config.php | sed 's@$passwd = .*@$passwd = \"SADRWQERTFAGARET\";@' |sed \"s/SADRWQERTFAGARET/$password/\"  > /tmp/.config.php\r\nmv  /tmp/.config.php  /home/app/config.php\r\n"
         }
       }
     ],
