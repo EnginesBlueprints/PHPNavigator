@@ -27,7 +27,7 @@
         "label": "GPL v2"
       }
     },
-    "timestamp": "2019-03-01T18:36:03+11:00"
+    "timestamp": "2019-03-15T12:56:26+11:00"
   },
   "software": {
     "base": {
@@ -85,6 +85,15 @@
         "build_time_only": true,
         "input": {
           "type": "password_with_confirmation"
+        }
+      },
+      {
+        "name": "user_name",
+        "mandatory": true,
+        "immutable": true,
+        "ask_at_build_time": true,
+        "input": {
+          "type": "string"
         }
       }
     ],
